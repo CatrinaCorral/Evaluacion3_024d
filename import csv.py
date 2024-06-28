@@ -29,7 +29,6 @@ def agregar_producto():
         precio = input("Precio del producto: ")
         writer.writerow([id, nombre, categoria, precio])
     print("Producto agregado.")
-
 def leer_inventario():
     try:
         with open('inventario.csv', 'r') as file:
@@ -37,7 +36,6 @@ def leer_inventario():
                 print(line.strip())
     except ValueError:
         print("El archivo de inventario no existe.")
-
 def clasificar_productos():
     categorias = {'Electrónica': [], 'Textil': [], 'Calzado': []}
     try:
@@ -59,4 +57,3 @@ def clasificar_productos():
     except ValueError:
         print("El archivo de inventario no existe.")
 menu()
-
