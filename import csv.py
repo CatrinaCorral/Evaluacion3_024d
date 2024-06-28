@@ -41,7 +41,7 @@ def clasificar_productos():
     try:
         with open('inventario.csv', 'r') as file:
             reader = csv.reader(file)
-            next(reader) # Saltamos la fila de encabezados
+            next(reader) 
             for row in reader:
                 categoria = row[2]
                 if categoria in categorias:
