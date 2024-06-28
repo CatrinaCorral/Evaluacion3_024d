@@ -35,7 +35,7 @@ def leer_inventario():
         with open('inventario.csv', 'r') as file:
             for line in file:
                 print(line.strip())
-    except FileNotFoundError:
+    except ValueError:
         print("El archivo de inventario no existe.")
 
 def clasificar_productos():
